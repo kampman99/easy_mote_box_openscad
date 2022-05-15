@@ -7,3 +7,13 @@ box_h = 30;
 face_t = 5;
 side_t = 10;
 top_bottom_t = 5;
+
+// face with button window
+
+// left wall
+
+// top wall with IR window and screw holes
+
+// right wall
+
+// bottom wall

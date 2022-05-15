@@ -2,6 +2,8 @@
 box_w = 80;
 box_l = 137;
 box_h = 30;
+
+// thicknesses
 floor_t = 5;
 side_t = 10;
 top_bottom_t = 5;
@@ -25,7 +27,7 @@ difference() {
         cylinder(h=floor_t + .01, r=3);
 }
 
-// left wall
+// left wall with screw holes
 color([0,1,0])
 translate([-box_w / 2 - (side_t / 2), 0, box_h / 2]) {
     cube([side_t, box_l, box_h + floor_t], true);
@@ -43,7 +45,7 @@ translate([0, box_l/2 + (top_bottom_t / 2), box_h/2]) {
     }
 }
 
-// right wall
+// right wall with screw holes
 color([0,1,0])
 translate([box_w / 2 + (side_t /2), 0, box_h /2]) {
     cube([side_t, box_l, box_h + floor_t], true);
