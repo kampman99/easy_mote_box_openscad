@@ -1,3 +1,6 @@
+//Use roundedcube.scad https://danielupshaw.com/openscad-rounded-corners/
+include <roundedcube.scad>;
+
 // Minimum fragment size (smooths the screw holes)
 $fs = 0.15;
 
@@ -22,7 +25,7 @@ thread_length = 20;
 
 // face with button window and recessed screw holes
 difference() {
-    cube([lid_w, lid_l, face_t], true);
+    roundedcube([lid_w, lid_l, face_t], true, .5, "zmin");
     // button window
     translate([0, -4, 0]) 
         cube([46, 55, face_t + .01], true);
@@ -53,12 +56,12 @@ difference() {
 }
 // left wall (overlaps face)
 translate([-lid_w / 2 + side_t / 2, 0, lid_h/2 - face_t/2])
-    cube([side_t, lid_l, lid_h], true);
+    roundedcube([side_t, lid_l, lid_h], true, .5, "zmin");
 
 // top wall with IR window
 translate([0, lid_l/2 - top_bottom_t/2, lid_h/2 - face_t/2]) {
     difference() {
-        cube([lid_w, top_bottom_t, lid_h], true);
+        roundedcube([lid_w, top_bottom_t, lid_h], true, .5, "zmin");
         
         // move up half the thickness of the floor of the base so the windows line up
         translate([0, 0, 2.5])
@@ -68,10 +71,10 @@ translate([0, lid_l/2 - top_bottom_t/2, lid_h/2 - face_t/2]) {
 
 // right wall
 translate([lid_w / 2 - side_t / 2, 0, lid_h/2 - face_t/2])
-    cube([side_t, lid_l, lid_h], true);
+    roundedcube([side_t, lid_l, lid_h], true, .5, "zmin");
 
 // bottom wall
 translate([0, -lid_l/2 + (top_bottom_t / 2), lid_h/2 - face_t/2]) {
-    cube([lid_w, top_bottom_t, lid_h], true);
+    roundedcube([lid_w, top_bottom_t, lid_h], true, .5, "zmin");
 }
 
