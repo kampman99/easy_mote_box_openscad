@@ -1,3 +1,6 @@
+// Minimum fragment size (smooths the screw holes)
+$fs = 0.15;
+
 // outer dimensions
 // 80 + 5 + 5 + 1
 lid_w = 91;

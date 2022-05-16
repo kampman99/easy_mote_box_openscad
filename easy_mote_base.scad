@@ -1,5 +1,8 @@
 // Easy Mote is 60x127.
 
+// Minimum fragment size (smooths the screw holes)
+$fs = 0.15;
+
 // outer dimensions
 box_w = 80;
 box_l = 137;
