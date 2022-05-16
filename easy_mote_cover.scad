@@ -20,7 +20,7 @@ top_bottom_t = 5;
 // security screws
 head_depth = 2;
 head_radius = 3;
-thread_radius = 1.5;
+thread_radius = 2.5;
 thread_length = 20;
 
 // face with button window and recessed screw holes
