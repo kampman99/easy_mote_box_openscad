@@ -1,3 +1,5 @@
+// See notes at the top of easy_mote_base.scad
+
 //Use roundedcube.scad https://danielupshaw.com/openscad-rounded-corners/
 include <roundedcube.scad>;
 

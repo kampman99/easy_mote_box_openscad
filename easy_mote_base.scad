@@ -1,4 +1,6 @@
 // Easy Mote is 60x127.
+// Security screws are button head T25 M5x20.
+// Screws to attach to wall are Tapcon concrete anchors 3/16" x 1-1/4".
 
 // Minimum fragment size (smooths the screw holes)
 $fs = 0.15;
