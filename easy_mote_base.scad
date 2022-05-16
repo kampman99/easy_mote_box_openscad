@@ -14,7 +14,7 @@ side_t = 10;
 top_bottom_t = 5;
 
 // security screws to attach cover
-thread_radius = 1.5;
+thread_radius = 2.5;
 
 // floor with screw holes
 difference() {
@@ -23,16 +23,16 @@ difference() {
     cube([box_w, box_l, floor_t], true);
     // upper-left hole
     translate([-20, 55, -floor_t/2 - .001])
-        cylinder(h=floor_t + .01, r1=2, r2=3);
+        cylinder(h=floor_t + .01, r1=2.5, r2=4.5);
     // upper-right hole
     translate([20, 55, -floor_t/2 - .001])
-        cylinder(h=floor_t + .01, r1=2, r2=3);
+        cylinder(h=floor_t + .01, r1=2.5, r2=4.5);
     // lower-right hole
     translate([20, -55, -floor_t/2 - .001])
-        cylinder(h=floor_t + .01, r1=2, r2=3);
+        cylinder(h=floor_t + .01, r1=2.5, r2=4.5);
     // lower-left hole
     translate([-20, -55, -floor_t/2 - .001])
-        cylinder(h=floor_t + .01, r1=2, r2=3);
+        cylinder(h=floor_t + .01, r1=2.5, r2=4.5);
 }
 
 // left wall with screw holes (y position is -lid_l/2 + 12 or lid_l/2 - 12)
