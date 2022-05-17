@@ -20,8 +20,8 @@ side_t = 5;
 top_bottom_t = 5;
 
 // security screws
-head_depth = 2;
-head_radius = 3;
+head_depth = 4;
+head_radius = 4.7;
 thread_radius = 2.5;
 thread_length = 20;
 
