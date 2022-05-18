@@ -2,6 +2,8 @@
 // Security screws are button head T25 M5x20.
 // Screws to attach to wall are Tapcon concrete anchors 3/16" x 1-1/4".
 
+echo();
+
 // Minimum fragment size (smooths the screw holes)
 $fs = 0.15;
 
@@ -11,7 +13,7 @@ rounding_r = 2;
 // outer dimensions
 base_w = 80;
 base_l = 137;
-base_h = 32;
+base_h = 31;
 
 echo(str("Base outer dimensions: " , base_w , " x " , base_l , " x " , base_h));
 
@@ -35,6 +37,9 @@ lid_h = base_h + lid_face_t;
 
 echo(str("Lid outer dimensions: ", lid_w, " x ", lid_l, " x ", lid_h));
 
+echo(str("Interior of box: ", base_w - (base_side_t * 2), " x ", base_l - (base_topbot_t * 2),
+    " x ", base_h - base_floor_t));
+
 // security screw dimensions
 ss_body_r = 2.5;
 ss_body_length = 20;
@@ -45,4 +50,4 @@ ss_head_r = 4.7;
 ir_window_width = 20;
 ir_window_height = 15;
 
-
+echo();
