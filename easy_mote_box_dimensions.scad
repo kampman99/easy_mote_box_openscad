@@ -41,4 +41,8 @@ ss_body_length = 20;
 ss_head_depth = 3;
 ss_head_r = 4.7;
 
+// IR window in top of base and lid
+ir_window_width = 20;
+ir_window_height = 15;
+
 

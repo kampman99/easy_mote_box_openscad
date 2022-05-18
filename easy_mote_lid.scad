@@ -47,7 +47,7 @@ translate([0, lid_l/2 - lid_topbot_t/2, lid_h/2]) {
         
         // move up half the thickness of the floor of the base so the windows line up
         translate([0, 0, base_floor_t/2])
-            cube([20, lid_topbot_t + .01, 15], true);
+            cube([ir_window_width, lid_topbot_t + .01, ir_window_height], true);
     }
 }
 

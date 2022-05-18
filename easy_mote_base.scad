@@ -41,8 +41,8 @@ translate([0, base_l/2 - (base_topbot_t / 2), base_h/2]) {
         // wall 
         cube([base_w, base_topbot_t, base_h], true);
         
-        // hole 20x15 centered vertically and horizontally
-        cube([20, base_topbot_t + 0.01, 15], true);
+        // hole centered vertically and horizontally
+        cube([ir_window_width, base_topbot_t + 0.01, ir_window_height], true);
     }
 }
 
