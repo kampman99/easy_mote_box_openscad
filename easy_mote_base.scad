@@ -37,13 +37,13 @@ difference() {
         cylinder(h=floor_t + .01, r1=2.5, r2=4.5);
 }
 
-// left wall with screw holes (y position is -lid_l/2 + 12 or lid_l/2 - 12)
-color([0,1,0])
-translate([-box_w / 2 + (side_t / 2), 0, box_h/2 - floor_t/2]) {
-    difference() {
+// left wall with screw holes (y position of holes is -lid_l/2 + 12 or lid_l/2 - 12)
+translate([-box_w / 2 + (side_t / 2), 0, box_h/2]) {
+    union() {
         cube([side_t, box_l, box_h], true);
-        translate([0, 62, (floor_t + box_h - 30)]) 
-            cylinder(h=30, r=thread_radius);
+        translate([0, 62, 0]) 
+            color([0,0,0])
+            cylinder(h=1, r=thread_radius);
         translate([0, -62, (floor_t + box_h - 30)]) 
             cylinder(h=30, r=thread_radius);
     }
@@ -51,7 +51,7 @@ translate([-box_w / 2 + (side_t / 2), 0, box_h/2 - floor_t/2]) {
 
 // top wall 5 thick with IR hole
 color([0,0,1])
-translate([0, box_l/2 - (top_bottom_t / 2), box_h/2 - floor_t/2]) {
+translate([0, box_l/2 - (top_bottom_t / 2), box_h/2]) {
     difference() {
         // wall 
         cube([box_w, top_bottom_t, box_h], true);
@@ -63,7 +63,7 @@ translate([0, box_l/2 - (top_bottom_t / 2), box_h/2 - floor_t/2]) {
 
 // right wall with screw holes
 color([0,1,0])
-translate([box_w / 2 - (side_t /2), 0, box_h/2 - floor_t/2 ]) {
+translate([box_w / 2 - (side_t /2), 0, box_h/2 ]) {
     difference() {
         cube([side_t, box_l, box_h], true);
         translate([0, 62, (floor_t + box_h - 30)])
@@ -75,6 +75,6 @@ translate([box_w / 2 - (side_t /2), 0, box_h/2 - floor_t/2 ]) {
 
 // bottom wall
 color([0,0,1])
-translate([0, -box_l/2 + (top_bottom_t / 2), box_h/2 - floor_t/2]) {
+translate([0, -box_l/2 + (top_bottom_t / 2), box_h/2]) {
     cube([box_w, top_bottom_t, box_h], true);
 }

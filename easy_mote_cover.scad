@@ -27,7 +27,7 @@ thread_length = 20;
 
 // face with button window and recessed screw holes
 difference() {
-    roundedcube([lid_w, lid_l, face_t], true, .5, "zmin");
+    roundedcube([lid_w, lid_l, face_t], true, 2, "zmin");
     // button window
     translate([0, -4, 0]) 
         cube([46, 55, face_t + .01], true);
@@ -58,12 +58,12 @@ difference() {
 }
 // left wall (overlaps face)
 translate([-lid_w / 2 + side_t / 2, 0, lid_h/2 - face_t/2])
-    roundedcube([side_t, lid_l, lid_h], true, .5, "zmin");
+    roundedcube([side_t, lid_l, lid_h], true, 2, "zmin");
 
 // top wall with IR window
 translate([0, lid_l/2 - top_bottom_t/2, lid_h/2 - face_t/2]) {
     difference() {
-        roundedcube([lid_w, top_bottom_t, lid_h], true, .5, "zmin");
+        roundedcube([lid_w, top_bottom_t, lid_h], true, 2, "zmin");
         
         // move up half the thickness of the floor of the base so the windows line up
         translate([0, 0, 2.5])
@@ -73,10 +73,10 @@ translate([0, lid_l/2 - top_bottom_t/2, lid_h/2 - face_t/2]) {
 
 // right wall
 translate([lid_w / 2 - side_t / 2, 0, lid_h/2 - face_t/2])
-    roundedcube([side_t, lid_l, lid_h], true, .5, "zmin");
+    roundedcube([side_t, lid_l, lid_h], true, 2, "zmin");
 
 // bottom wall
 translate([0, -lid_l/2 + (top_bottom_t / 2), lid_h/2 - face_t/2]) {
-    roundedcube([lid_w, top_bottom_t, lid_h], true, .5, "zmin");
+    roundedcube([lid_w, top_bottom_t, lid_h], true, 2, "zmin");
 }
 
