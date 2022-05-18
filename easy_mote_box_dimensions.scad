@@ -49,5 +49,7 @@ ss_head_r = 4.7;
 // IR window in top of base and lid
 ir_window_width = 20;
 ir_window_height = 15;
+// IR window will be centered vertically and then moved this much up from base floor.
+ir_window_vert_adj = 3;
 
 echo();

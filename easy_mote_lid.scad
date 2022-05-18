@@ -46,7 +46,8 @@ translate([0, lid_l/2 - lid_topbot_t/2, lid_h/2]) {
         roundedcube([lid_w, lid_topbot_t, lid_h], true, rounding_r, "zmin");
         
         // move up half the thickness of the floor of the base so the windows line up
-        translate([0, 0, base_floor_t/2])
+        // then subtract adjustment amount to match base.
+        translate([0, 0, base_floor_t/2 - ir_window_vert_adj])
             cube([ir_window_width, lid_topbot_t + .01, ir_window_height], true);
     }
 }
