@@ -9,7 +9,7 @@ include <roundedcube.scad>;
 difference() {
     roundedcube([lid_w, lid_l, lid_face_t], true, rounding_r, "zmin");
     // button window
-    translate([0, -4, 0]) 
+    translate([0, -3, 0]) 
         cube([46, 55, lid_face_t + .01], true);
     
     // upper-left screw hole for recessed pan-head security screw
