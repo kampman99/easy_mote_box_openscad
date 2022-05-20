@@ -10,7 +10,7 @@ $fs = 0.15;
 //openscad-rounded-corners rounding radius
 rounding_r = 2;
 
-// outer dimensions
+// outer dimensions of base
 base_w = 80;
 base_l = 137;
 base_h = 31;
