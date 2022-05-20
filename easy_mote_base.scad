@@ -3,23 +3,24 @@
 include <easy_mote_box_dimensions.scad>;
 
 // floor with screw holes
-difference() {
-    // floor
-    color([1, 0, 0])
-    cube([base_w, base_l, base_floor_t], true);
-    // upper-left hole
-    translate([-20, 55, -base_floor_t/2 - .001])
-        cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
-    // upper-right hole
-    translate([20, 55, -base_floor_t/2 - .001])
-        cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
-    // lower-right hole
-    translate([20, -55, -base_floor_t/2 - .001])
-        cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
-    // lower-left hole
-    translate([-20, -55, -base_floor_t/2 - .001])
-        cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
-}
+translate([0, 0, base_floor_t/2])
+    difference() {
+        // floor
+        color([1, 0, 0])
+        cube([base_w, base_l, base_floor_t], true);
+        // upper-left hole
+        translate([-20, 55, -base_floor_t/2 - .001])
+            cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
+        // upper-right hole
+        translate([20, 55, -base_floor_t/2 - .001])
+            cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
+        // lower-right hole
+        translate([20, -55, -base_floor_t/2 - .001])
+            cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
+        // lower-left hole
+        translate([-20, -55, -base_floor_t/2 - .001])
+            cylinder(h=base_floor_t + .01, r1=2.5, r2=4.5);
+    }
 
 // left wall with screw holes (y position of holes is -lid_l/2 + 12 or lid_l/2 - 12)
 // move wall out by half width, then back in by half thickness
