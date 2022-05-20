@@ -34,7 +34,7 @@ translate([-base_w / 2 + (base_side_t / 2), 0, base_h/2]) {
     }
 }
 
-// top wall 5 thick with IR hole
+// top wall with IR hole
 color([0,0,1])
 translate([0, base_l/2 - (base_topbot_t / 2), base_h/2]) {
     difference() {
