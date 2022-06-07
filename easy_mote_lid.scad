@@ -15,24 +15,24 @@ translate([0, 0, lid_face_t/2])
         
         // upper-left screw hole for recessed pan-head security screw
         // The hole has to be moved in by side_t + one-half base side wall thickness
-        translate([-(lid_w/2) + lid_side_t + base_side_t/2,  (lid_l/2) - 12, -(lid_face_t /2)- .01]) {
+        translate([-(lid_w/2) + lid_side_t + base_side_t/2,  (lid_l/2) - ss_vert_dist, -(lid_face_t /2)- .01]) {
             // recess for head
             cylinder(h=ss_head_depth, r=ss_head_r, center=true);
             // through hole for screw. The +8 is just enough to break through
             cylinder(h=lid_face_t + 8, r=ss_body_r, center=true);
         }
         // upper-right
-        translate([ (lid_w/2) - lid_side_t - base_side_t/2,  (lid_l/2) - 12, -(lid_face_t /2)- .01]) {
+        translate([ (lid_w/2) - lid_side_t - base_side_t/2,  (lid_l/2) - ss_vert_dist, -(lid_face_t /2)- .01]) {
             cylinder(h=ss_head_depth, r=ss_head_r, center=true);
             cylinder(h=lid_face_t + 8, r=ss_body_r, center=true);
         }
         // lower-right
-        translate([ (lid_w/2) - lid_side_t - base_side_t/2, -(lid_l/2) + 12, -(lid_face_t /2)- .01]) {
+        translate([ (lid_w/2) - lid_side_t - base_side_t/2, -(lid_l/2) + ss_vert_dist, -(lid_face_t /2)- .01]) {
             cylinder(h=ss_head_depth, r=ss_head_r, center=true);
             cylinder(h=lid_face_t + 8, r=ss_body_r, center=true);
         }
         // lower-left
-        translate([-(lid_w/2) + lid_side_t + base_side_t/2, -(lid_l/2) + 12, -(lid_face_t /2)- .01]) {
+        translate([-(lid_w/2) + lid_side_t + base_side_t/2, -(lid_l/2) + ss_vert_dist, -(lid_face_t /2)- .01]) {
             cylinder(h=ss_head_depth, r=ss_head_r, center=true);
             cylinder(h=lid_face_t + 8, r=ss_body_r, center=true);
         }

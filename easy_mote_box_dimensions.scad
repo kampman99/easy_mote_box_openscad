@@ -11,7 +11,7 @@ $fs = 0.15;
 rounding_r = 2;
 
 // outer dimensions of base
-base_w = 80;
+base_w = 100;
 base_l = 137;
 base_h = 31;
 
@@ -19,7 +19,7 @@ echo(str("Base outer dimensions: " , base_w , " x " , base_l , " x " , base_h));
 
 // base thicknesses
 base_floor_t = 5;
-base_side_t = 10;
+base_side_t = 20;
 base_topbot_t = 5;
 
 // lid thicknesses
@@ -45,6 +45,9 @@ ss_body_r = 2.5;
 ss_body_length = 20;
 ss_head_depth = 3;
 ss_head_r = 4.7;
+ss_insert_body_r = 3.5;
+// vertical distance from outside surface of lid to center of hole
+ss_vert_dist = 15;
 
 // IR window in top of base and lid
 ir_window_width = 20;
